@@ -7,6 +7,8 @@ get_header();
     <?php
 		the_content();?>
     </section>
+    <?php echo init_wprazmi_blocks();?>
+    <?php echo init_wprazmi_blocks_theme();?>
 
     <?php endwhile;?>
 <?php
