@@ -1,0 +1,26 @@
+{
+  "name": "razmi",
+  "version": "1.0.0",
+  "description": "WP Startertheme",
+  "main": "index.js",
+  "repository": "https://github.com/gpsimpact/WP-Cold-Start.git",
+  "author": "joshuamitchell <joshua@gpsimpact.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@wordpress/browserslist-config": "^2.2.2",
+    "autoprefixer": "^9.4.2",
+    "dotenv": "^6.2.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "postcss-cli": "^6.0.1",
+    "postcss-focus-within": "^3.0.0"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "scripts": {
+    "build:style": "node-sass style.scss style.css --output-style postcss -r style.css",
+    "build:theme": "node razmi.config.js",
+    "watch": "nodemon --ignore sass/_variables.global.scss -e scss,env -x \"yarn run build:theme && yarn run build:style\""
+  }
+}
