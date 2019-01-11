@@ -8,16 +8,21 @@ get_header();
 		the_content();?>
     </section>
 
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
+
 </div>
+
+<div class="col-md-1"></div>
+<div class="col-md-2"></div>
+<div class="col-md-3"></div>
+<div class="col-md-4"></div>
+<div class="col-md-5"></div>
+<div class="col-md-6"></div>
+<div class="col-md-7"></div>
+<div class="col-md-8"></div>
+<div class="col-md-9"></div>
+<div class="col-md-10"></div>
+<div class="col-md-11"></div>
+<div class="col-md-12"></div>
 
     <?php endwhile;?>
 <?php

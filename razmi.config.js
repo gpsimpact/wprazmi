@@ -18,10 +18,10 @@ function transform(line) {
   this.output.write(`$${_var[0]}: ${_var[1]};\n`);
 }
 
-if (fs.existsSync('../../plugins/wprazmi/src')){
+if (fs.existsSync('../../plugins/wprazmi-blocks/src')){
   const pluginFile = readline.createInterface({
     input: fs.createReadStream('theme.env'),
-    output: fs.createWriteStream('../../plugins/wprazmi/src/_variables.global.scss'),
+    output: fs.createWriteStream('../../plugins/wprazmi-blocks/src/_variables.global.scss'),
     terminal: false
   });
   pluginFile
