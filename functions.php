@@ -133,4 +133,5 @@ add_action( 'wp_enqueue_scripts', 'razmi_scripts');
 require get_template_directory() . '/inc/acf.php';
 require get_template_directory() . '/inc/allowed-blocks.php';
 require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 require get_template_directory() . '/inc/template-tags.php';
