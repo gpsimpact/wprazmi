@@ -3,6 +3,7 @@ Theme Name: wprazmi
 Author: Joshua Mitchell
 Author URI: https://github.com/JoshuaMitchell/wprazmi
 */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
@@ -302,5 +303,189 @@ template {
 [hidden] {
   display: none; }
 
-.entry-title {
-  color: #1dcaff; }
+.navbar {
+  padding: 1rem;
+  transition: all 0.25s ease-in-out; }
+  .navbar .navbar-brand {
+    line-height: 1;
+    padding-bottom: 0;
+    width: 100px; }
+    .navbar .navbar-brand img {
+      max-width: 100%;
+      width: 100px; }
+      @media (min-width: 576px) {
+        .navbar .navbar-brand img {
+          width: 100px; } }
+    @media (min-width: 576px) {
+      .navbar .navbar-brand {
+        width: 100px; } }
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block; }
+  .navbar .navbar-toggler {
+    font-weight: 400;
+    color: #003d79;
+    font-size: 2rem; }
+  .navbar .nav-link {
+    color: #003d79;
+    font-size: 1.15rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-weight: 700;
+    padding-left: 1rem; }
+    @media (min-width: 992px) {
+      .navbar .nav-link {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important; } }
+    .navbar .nav-link:hover {
+      color: #16c1e6; }
+  .navbar .donate .nav-link {
+    background: #fff;
+    color: #fff;
+    text-transform: uppercase; }
+    .navbar .donate .nav-link:hover {
+      background: #fff;
+      color: #fff; }
+    @media (min-width: 992px) {
+      .navbar .donate .nav-link {
+        margin-left: 0.5rem; } }
+  .navbar .dropdown-menu {
+    left: -40px;
+    border: none;
+    background: #16c1e6;
+    border-radius: 0;
+    padding: 0.5rem 0 0 0; }
+    .navbar .dropdown-menu:before {
+      content: '';
+      display: block;
+      height: 20px;
+      width: 20px;
+      background: #16c1e6;
+      position: absolute;
+      top: -10px;
+      left: -moz-calc(50% - 10px);
+      left: -webkit-calc(50% - 10px);
+      left: calc(50% - 10px);
+      transform: rotate(45deg); }
+    .navbar .dropdown-menu a {
+      color: #fff;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center; }
+      .navbar .dropdown-menu a:hover {
+        color: #003d79;
+        background: none; }
+  .navbar .dropdown-toggle:after {
+    display: none; }
+
+#hero {
+  max-height: 450px;
+  position: relative;
+  z-index: 5; }
+  @media (min-width: 768px) {
+    #hero {
+      max-height: 600px; } }
+  #hero figure {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block; }
+    #hero figure img {
+      /* Make image to at least 100% wide and tall */
+      min-width: 100%;
+      /* Setting height to auto prevents the browser from stretching or squishing the image */
+      width: 100%;
+      height: auto;
+      /* Center the image */
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 5; }
+  #hero .container {
+    position: relative;
+    height: 100%;
+    min-height: 450px;
+    z-index: 50;
+    padding: 100px 0px;
+    text-align: center; }
+    #hero .container h1 {
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase; }
+    #hero .container h3 {
+      color: #fff;
+      font-size: 1.5rem; }
+
+html {
+  margin-top: 0px !important; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+img {
+  max-width: 100%; }
+
+.btn {
+  border-radius: 0px;
+  text-transform: uppercase; }
+
+.btn-primary {
+  background-color: #003d79;
+  border-color: #003d79; }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #16c1e6;
+    border-color: #16c1e6; }
+
+#hqs-wrap {
+  background-color: #003d79;
+  min-height: 240px;
+  padding: 20px 10px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center; }
+
+.hqs-quote,
+.hqs-cite {
+  margin: 0;
+  color: #fff; }
+
+.hqs-cite {
+  margin-top: 15px; }
+
+.factoid {
+  padding: 50px 0 30px 0;
+  background-image: url("assets/images/worn-dots.png"); }
+
+.factoid h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #003d79; }
+
+.factoid .circle-icon {
+  margin: 25px;
+  font-size: 5rem;
+  color: #16c1e6; }
+
+.footer-logo {
+  max-width: 190px;
+  height: auto;
+  display: block;
+  margin: 25px auto; }
+
+.disclaimer {
+  text-align: center;
+  width: 300px;
+  max-width: 100%;
+  padding: 8px 10px;
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  display: block;
+  margin: 20px auto; }

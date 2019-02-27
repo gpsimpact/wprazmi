@@ -3,12 +3,82 @@ Theme Name: wprazmi
 Author: Joshua Mitchell
 Author URI: https://github.com/JoshuaMitchell/wprazmi
 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @import "sass/variables.global";
 @import "sass/normalize";
 @import "sass/mixins";
+@import "sass/navbar";
+@import "sass/hero";
 
-.entry-title {
-    color: $primaryColor;
-    
+html {
+    margin-top: 0px !important;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+
+.btn {
+    border-radius: 0px;
+    text-transform: uppercase;
+}
+
+.btn-primary{
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $secondaryColor;
+        border-color: $secondaryColor;
+
+    }
+}
+
+#hqs-wrap {
+	background-color: $primaryColor;
+	min-height: 240px;
+	padding: 20px 10px;
+	display: flex;
+	text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.hqs-quote,
+.hqs-cite {
+	margin: 0;
+	color: #fff;
+}
+.hqs-cite {
+	margin-top: 15px;
+}
+
+
+.factoid { padding: 50px 0 30px 0; background-image: url('assets/images/worn-dots.png'); }
+.factoid h2 {font-weight: 800; text-transform: uppercase; color: $primaryColor;}
+.factoid .circle-icon { margin: 25px; font-size: 5rem;color: $secondaryColor;}
+
+
+.footer-logo {
+    max-width: 190px;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+  }
+
+
+  .disclaimer {
+	text-align: center;
+	width: 300px;
+	max-width:100%;
+	padding: 8px 10px;
+	font-size: 10px;
+	line-height: 14px;
+	text-transform: uppercase;
+	border: 1px solid #000;
+	display: block;
+	margin: 20px auto;
 }
