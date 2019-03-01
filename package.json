@@ -13,14 +13,16 @@
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "postcss-cli": "^6.0.1",
-    "postcss-focus-within": "^3.0.0"
+    "postcss-focus-within": "^3.0.0",
+    "uglify-js": "^3.4.9"
   },
   "browserslist": [
     "extends @wordpress/browserslist-config"
   ],
   "scripts": {
     "build:style": "node-sass style.scss style.css --output-style postcss -r style.css",
+    "build:js": "uglifyjs assets/js/dev/*.js -o assets/js/main.min.js",
     "build:theme": "node razmi.config.js",
-    "watch": "nodemon --ignore sass/_variables.global.scss -e scss,env -x \"yarn run build:theme && yarn run build:style\""
+    "watch": "nodemon -e scss,env,js -x \"yarn run build:theme && yarn run build:style && yarn run build:js\""
   }
 }

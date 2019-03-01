@@ -20,14 +20,19 @@
 		<link rel="icon" type="image/png" href="<?php the_field('favicon_96','option');?>" sizes="96x96" />
 		<?php endif;?>
 
+    <title>
+			<?php if (is_front_page()) { echo bloginfo("name"); echo " | "; echo bloginfo("description"); }
+	      		elseif (is_home()) { echo 'News | ' . get_bloginfo("name"); }
+	      		elseif (is_404()) {  echo 'Content not found... | ' . get_bloginfo("name"); }
+	      		else { echo get_the_title() . ' | ' . get_bloginfo("name"); } ?>
+    </title>
+    
 
   </head>
 	<body <?php body_class(); ?>>
   <?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); }?>
 
-<header id="header" role="banner" class="">
-
-
+<header id="header" role="banner">
 
     <nav class="navbar navbar-expand-lg navbar-static-top">
     <div class="container">
@@ -53,7 +58,7 @@
            'theme_location'  => 'header-menu',
            'container'       => false,
            'menu_id'         => false,
-           'menu_class'      => 'navbar-nav flex-lg-row mb-2 ml-auto',
+           'menu_class'      => 'navbar-nav ml-auto',
            'depth'           => 2,
            'fallback_cb'     => 'wp_bootstrap4_navwalker::fallback',
            'walker'          => new wp_bootstrap4_navwalker()
