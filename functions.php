@@ -115,10 +115,10 @@ add_action( 'after_setup_theme', 'razmi_setup');
 function razmi_scripts() {	
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'jquery-form' );
-
 	wp_enqueue_script( 'jquery', get_stylesheet_directory_uri() . '/assets/js/jquery-2.2.4.min.js', array(), '2.2.4', false);
 	wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/assets/js/main.min.js');
-    wp_enqueue_style( 'razmi-style', get_stylesheet_uri());
+	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+	wp_enqueue_style( 'razmi-style', get_stylesheet_uri());
 
 }
 

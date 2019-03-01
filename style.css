@@ -9997,3 +9997,37 @@ template {
     #hero .container h3 {
       color: #fff;
       font-size: 1.5rem; }
+
+.social a:before {
+  content: none; }
+
+li.social > a {
+  font-size: 0px !important;
+  padding-bottom: 8px;
+  font-weight: 900; }
+
+li.social > a:before {
+  font-family: 'Font Awesome 5 Brands';
+  font-size: 24px;
+  display: inline-block;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  visibility: visible; }
+
+.facebook a:before {
+  content: '\f09a'; }
+
+.twitter a:before {
+  content: '\f099'; }
+
+.youtube a:before {
+  content: '\f167'; }
+
+.instagram a:before {
+  content: '\f16d'; }
+
+.snapchat a:before {
+  content: '\f2ac'; }
+
+.medium a:before {
+  content: '\f23a'; }
