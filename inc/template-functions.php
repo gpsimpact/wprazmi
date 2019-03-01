@@ -7,19 +7,6 @@ function theme_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
-
-  if ( is_page('bio') ) {
-    $classes[] = 'bio-page';      
-  }
-
-  if ( is_page_template('parent-page.php') ) {
-  	$classes[] = 'parent-page';
-  }
-
   if ( is_child() ) {
   	$classes[] = 'child-page';
   }
