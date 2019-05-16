@@ -2,16 +2,33 @@
 get_header();
 ?>
 
-	<div id="primary">
+	<div class="content">
 
-		<?php
-			while ( have_posts() ) :
+		<?php while ( have_posts() ) : the_post();?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					
+					<header class="entry-header">
+							<h1><?php the_title();?></h1>
+					</header>
 
-				the_post();
-				get_template_part( 'template-parts/content', 'page' );
+					<main class="entry-content">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-10">
 
-			endwhile; // End of the loop.
-		?>
+									<?php the_content();?>
+
+								</div>
+							</div>
+						</div>
+					</main>
+
+					<footer class="entry-footer">
+					
+					</footer>
+
+		</article>
+		<?php endwhile;?>
 
 	</div><!-- #primary -->
 

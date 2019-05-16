@@ -2,22 +2,24 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="content">
+			<div class="error-404 not-found container">
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<header class="entry-header">
+							<h1><?php _e( 'Oops! That page can&rsquo;t be found.'); ?></h1>
+						</header>
+					
 
-			<div class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'coldstart' ); ?></h1>
-				</header><!-- .page-header -->
+						<main id="main">
+							<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?'); ?></p>
+							<?php get_search_form(); ?>
+						</main>
+					</div>
+				</div>
+			</div>
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'coldstart' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</div><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div>
 
 <?php
 get_footer();

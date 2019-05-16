@@ -7,18 +7,6 @@
 		<?php wp_head(); ?>
 
 
-    <?php if(get_field('favicon','option')):?>
-		<link rel="icon" type="image/ico" href="<?php the_field('favicon','option');?>" sizes="16x16" />
-		<?php endif;?>
-		<?php if(get_field('favicon_16','option')):?>
-		<link rel="icon" type="image/png" href="<?php the_field('favicon_16','option');?>" sizes="16x16" />
-		<?php endif;?>
-		<?php if(get_field('favicon_32','option')):?>
-		<link rel="icon" type="image/png" href="<?php the_field('favicon_32','option');?>" sizes="32x32" />
-		<?php endif;?>
-		<?php if(get_field('favicon_32','option')):?>
-		<link rel="icon" type="image/png" href="<?php the_field('favicon_96','option');?>" sizes="96x96" />
-		<?php endif;?>
 
     <title>
 			<?php if (is_front_page()) { echo bloginfo("name"); echo " | "; echo bloginfo("description"); }

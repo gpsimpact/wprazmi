@@ -2,23 +2,32 @@
 get_header();
 ?>
 
-	<div id="primary" class="container py-5">
+<div class="content">
+		<?php while ( have_posts() ) : the_post();?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					
+					<header class="entry-header">
+							<h1><?php the_title();?></h1>
+					</header>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+					<main class="entry-content">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-10">
 
-			get_template_part( 'template-parts/content', get_post_type() ); ?>
-		
-		<div class="row">
-			<?php the_post_navigation(array(
-        'prev_text'  => __( '<h5 class="mb-3"><i class="fas fa-chevron-left fa-xs" aria-hidden="true"></i> &nbsp;Previous Post</h5><h3>%title</h3>' ),
-        'next_text'  => __( '<h5 class="mb-3">Next Post &nbsp <i class="fas fa-chevron-right fa-xs" aria-hidden="true"></i></h5><h3>%title</h3>' )
-      )); ?>
-    </div>
-<?php 
-		endwhile; // End of the loop.
-		?>
-	</div><!-- #primary -->
+									<?php the_content();?>
+
+								</div>
+							</div>
+						</div>
+					</main>
+
+					<footer class="entry-footer">
+					
+					</footer>
+
+				</article>
+		<?php endwhile; ?>
+	</div>
 
 <?php get_footer();

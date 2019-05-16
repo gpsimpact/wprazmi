@@ -22,7 +22,7 @@
   "scripts": {
     "build:style": "node-sass style.scss style.css --output-style postcss -r style.css",
     "build:js": "uglifyjs assets/js/dev/*.js -o assets/js/main.min.js",
-    "build:theme": "node razmi.config.js",
+    "build:theme": "node theme.config.js",
     "watch": "nodemon -e scss,env,js -x \"yarn run build:theme && yarn run build:style && yarn run build:js\""
   }
 }

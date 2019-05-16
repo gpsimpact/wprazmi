@@ -1,0 +1,57 @@
+.blog {
+    .blog-header {
+        text-align: center;
+    }
+}
+
+
+
+.pagination {
+    width: 100%;
+    margin: 50px 0;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .page-numbers {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .pagination li {
+    display: inline-block;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .pagination li:last-of-type {
+    border: none;
+  }
+  
+  .pagination li a,
+  .pagination li .current {
+    text-align: center;
+    display: inline-block;
+    padding: 12px;
+    margin: 0;
+  }
+  
+  .pagination .page-numbers.current {
+    opacity: 0.5;
+  }
+  
+  .pagination li>*:hover,
+  .pagination li>*:focus,
+  .pagination .page-numbers.current:hover,
+  .pagination .page-numbers.current:focus {
+    text-decoration: none;
+    background-color: $primaryColor;
+  }
+  
+  .pagination .page-numbers.current:hover,
+  .pagination .page-numbers.current:focus {
+    cursor: pointer;
+  }

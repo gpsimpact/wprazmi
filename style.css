@@ -9955,49 +9955,6 @@ template {
       .navbar .donate .nav-link {
         margin-left: 0.5rem; } }
 
-#hero {
-  max-height: 450px;
-  position: relative;
-  z-index: 5; }
-  @media (min-width: 768px) {
-    #hero {
-      max-height: 600px; } }
-  #hero figure {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block; }
-    #hero figure img {
-      /* Make image to at least 100% wide and tall */
-      min-width: 100%;
-      /* Setting height to auto prevents the browser from stretching or squishing the image */
-      width: 100%;
-      height: auto;
-      /* Center the image */
-      position: absolute;
-      top: -100px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      z-index: 5; }
-  #hero .container {
-    position: relative;
-    height: 100%;
-    min-height: 450px;
-    z-index: 50;
-    padding: 100px 0px;
-    text-align: center; }
-    #hero .container h1 {
-      color: #fff;
-      font-weight: 800;
-      text-transform: uppercase; }
-    #hero .container h3 {
-      color: #fff;
-      font-size: 1.5rem; }
-
 .social a:before {
   content: none; }
 
@@ -10031,3 +9988,48 @@ li.social > a:before {
 
 .medium a:before {
   content: '\f23a'; }
+
+.blog .blog-header {
+  text-align: center; }
+
+.pagination {
+  width: 100%;
+  margin: 50px 0;
+  text-align: left;
+  display: inline-block; }
+
+.page-numbers {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none; }
+
+.pagination li {
+  display: inline-block;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.pagination li:last-of-type {
+  border: none; }
+
+.pagination li a,
+.pagination li .current {
+  text-align: center;
+  display: inline-block;
+  padding: 12px;
+  margin: 0; }
+
+.pagination .page-numbers.current {
+  opacity: 0.5; }
+
+.pagination li > *:hover,
+.pagination li > *:focus,
+.pagination .page-numbers.current:hover,
+.pagination .page-numbers.current:focus {
+  text-decoration: none;
+  background-color: #003d79; }
+
+.pagination .page-numbers.current:hover,
+.pagination .page-numbers.current:focus {
+  cursor: pointer; }
